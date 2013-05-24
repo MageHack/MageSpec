@@ -14,27 +14,30 @@
  * through the world-wide-web, please send an email
  * to <magetest@sessiondigital.com> so we can send you a copy immediately.
  *
- * @category   Mage
- * @package    Core
- * @subpackage Controller
+ * @category   MageTest
+ * @package    PhpSpec_MagentoExtension
+ * @subpackage Bootstrap
  *
  * @copyright  Copyright (c) 2012-2013 MageTest team and contributors.
  */
+namespace spec\MageTest\PhpSpec\MagentoExtension\Bootstrap;
+
+use PhpSpec\ObjectBehavior;
 
 /**
- * Mage_Core_Controller_Response_Http
+ * AppSpec
  *
- * @category   Mage
- * @package    Core
- * @subpackage Controller
+ * @category   MageTest
+ * @package    PhpSpec_MagentoExtension
+ * @subpackage Bootstrap
  *
  * @author     MageTest team (https://github.com/MageTest/MageSpec/contributors)
  */
-class Mage_Core_Controller_Response_Http extends Zend_Controller_Response_HttpTestCase
+class AppSpec extends ObjectBehavior
 {
-	public function sendResponse()
+    function let()
     {
-        Mage::dispatchEvent('http_response_send_before', array('response'=>$this));
-        return parent::sendResponse();
+        $app->beAMockOf('MageTest\PhpSpec\MagentoExtension\Bootstrap\App');
+        $this->beConstructedWith($app);
     }
 }

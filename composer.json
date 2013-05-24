@@ -1,8 +1,9 @@
 {
-    "name": "phpspec/magespec",
-    "description": "Magento PHPSpec2 extension",
+    "name": "magetest/magento-phpspec-extension",
+    "description": "Magento PHPSpec extension",
     "require": {
-        "phpspec/phpspec2": "magento-demo",
+        "phpspec/phpspec": "dev-master",
+        "phpspec/prophecy": "dev-master",
         "symfony/dependency-injection": "*",
         "symfony/config": "*"
     },
@@ -12,31 +13,43 @@
     "minimun-stability": "dev",
     "autoload": {
         "psr-0": {
-            "PHPSpec2\\Magento": "src",
-            "": ["vendor/magento/lib","vendor/magento/app"],
+            "MageTest\\PhpSpec\\MagentoExtension": "src",
+            "": [
+                "src",
+                "vendor/magento/lib",
+                "vendor/magento/app"
+            ],
             "Mage": "vendor/magento/app/code/core"
         }
     },
     "authors": [
-    {
-        "name": "Alistair Stead",
-        "email": "astead@sessiondigital.com"
-    },
-    {
-        "name": "Marcello Duarte",
-        "email": "mduarte@sessiondigital.com"
-    },
-    {
-        "name": "Sarunas",
-        "email": "sarunas@sessiondigital.com"
-    },
-    {
-        "name": "Daniel",
-        "email": "daniel@sessiondigital.com"
-    },
-    {
-        "name": "Mark Slocock",
-        "email": "mark@gpmd.co.uk"
-    }
+        {
+            "name": "Alistair Stead",
+            "email": "astead@sessiondigital.com"
+        },
+        {
+            "name": "Marcello Duarte",
+            "email": "mduarte@sessiondigital.com"
+        },
+        {
+            "name": "Sarunas",
+            "email": "sarunas@sessiondigital.com"
+        },
+        {
+            "name": "Daniel",
+            "email": "daniel@sessiondigital.com"
+        },
+        {
+            "name": "Mark Slocock",
+            "email": "mark@gpmd.co.uk"
+        },
+        {
+            "name": "Marco De Bortoli",
+            "email": "marco.debortoli@sessiondigital.com"
+        },
+        {
+            "name": "Other contributors",
+            "homepage": "https://github.com/MageTest/MageSpec/contributors"
+        }
     ]
 }
